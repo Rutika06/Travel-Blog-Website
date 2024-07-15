@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forests</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.eazywallz.com/cdn/shop/products/Mystic-Forest-Landscape-Wall-Mural_0852a2f7-50a8-4f80-8226-9fc399d7b023.jpg?v=1628797728);
+            background-position: center;
+            background-size: cover;
+            padding-left: 15%;
+            padding-right: 15%;
+            box-sizing: border-box;
+        }
+        .navbar {
+            height: 12%;
+            display: flex;
+            align-items: center;
+            background: #333;
+            width: 1485px;
+            position:relative;
+            left: -250px;
+        }
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+        .row {
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+        .col {
+            flex-basis: 50%;
+        }
+        h1 {
+            color: #fff;
+            font-size: 100px;
+        }
+        p {
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        button {
+            width: 180px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+        }
+        .card {
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 14px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url(images/bgimg.jpg);
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+        .card1 {
+            background-image: url(https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/63de8fc3bb978e001e37cf2f.jpg)
+        }
+        .card2 {
+            background-image: url(https://beyonder.travel/wp-content/uploads/2020/06/Sundarban_river-1024x445.jpg);
+            position: relative;
+            top: -17px;
+            left: 20px;
+        }
+        .card3 {
+            background-image: url(https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2022/02/Ranthambore-National-Park-Sawai-Madhopur-Rajasthan.jpg?resize=900%2C600&ssl=1);
+            position: relative;
+            left: 130px;
+        }
+        .card3 {
+            background-image: url(https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2022/02/Ranthambore-National-Park-Sawai-Madhopur-Rajasthan.jpg?resize=900%2C600&ssl=1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        h5 {
+            color: #fff;
+            text-shadow: 0 0 5px #999;
+        }
+        .card p {
+            text-shadow: 0 0 15px #000;
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="project.html">HOME</a></li>
+                <li><a href="">REGION</a></li>
+                <li><a href="">ABOUT</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu.jpg" class="menu-icon">
+    </div>
+
+    <div class="row">
+        <div class="col">
+          <h1>Forests in India</h1>
+          <p>India's diverse forests encompass tropical rainforests in the Western Ghats,
+             the dense forests of the Sundarbans mangrove delta, and the rich biodiversity
+             of Jim Corbett and Ranthambore National Parks, offering habitats for myriad 
+             species and eco-tourism opportunities.</p>
+             <button type="button">Explore</button>
+        </div>
+        <div class="col">
+          <div class="card card1">
+            <h5>Western Ghats</h5>
+            <p>The Western Ghats of India harbor lush tropical rainforests teeming with 
+              biodiversity, including endemic flora and fauna. These vital ecosystems provide
+              essential ecological services and support local communities while offering 
+              breathtaking landscapes for exploration and conservation efforts.</p>
+          </div>
+          <div class="card card2">
+            <h5>Sundarbans</h5>
+            <p>The Sundarbans, a UNESCO World Heritage Site, is a vast mangrove forest spanning
+              India and Bangladesh, famed for its Royal Bengal Tigers and unique ecosystem. It's
+              a critical habitat, protecting coastlines, biodiversity, and supporting local communities.</p>
+          </div>
+          <div class="card card3">
+            <h5>National Parks</h5>
+            <p>India's national parks feature diverse forest ecosystems, from the dense forests of Jim Corbett
+              and Ranthambore to the tropical jungles of Periyar and Kaziranga, harboring iconic wildlife like
+              tigers, elephants, and rhinoceros, preserving India's natural heritage.</p>
+          </div>
+     </div>
+  
+</div>
+</body>
+</html>

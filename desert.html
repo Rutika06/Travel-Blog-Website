@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deserts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://geographical.co.uk/wp-content/uploads/Saharasunset-2.jpg);
+            background-position: center;
+            background-size: cover;
+            padding-left: 15%;
+            padding-right: 15%;
+            box-sizing: border-box;
+        }
+        .navbar {
+            height: 12%;
+            display: flex;
+            align-items: center;
+            background: #333;
+            width: 1485px;
+            position:relative;
+            left: -250px;
+        }
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+        .row {
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+        .col {
+            flex-basis: 50%;
+        }
+        h1 {
+            color: #fff;
+            font-size: 100px;
+        }
+        p {
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        button {
+            width: 180px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+        }
+        .card {
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 14px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url(images/bgimg.jpg);
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+        .card1 {
+            background-image: url(https://img.veenaworld.com/wp-content/uploads/2018/06/1-cover-shutterstock_782705764-Camel-ride-on-the-sand-dunes-of-Thar-desert-Jaisalmer.jpg?imwidth=640);
+        }
+        .card2 {
+            background-image: url(https://www.sharpholidays.in/blog/wp-content/uploads/2019/10/rann-Camel-Ride.jpg);
+            position: relative;
+            top: -17px;
+            left: 20px;
+        }
+        .card3 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxYIZz_z4KOnbBZNxFM6QaBOZMhbzg8EYYLLt5CVvHUvWKUBzxSPtXkgxttVEpali8n-U&usqp=CAU);
+            position: relative;
+            left: 130px;
+        }
+        .card3 {
+            background-image: url(https://ajgarci5desert.weebly.com/uploads/2/9/8/4/29848337/537732.jpg?426);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        h5 {
+            color: #fff;
+            text-shadow: 0 0 5px #999;
+        }
+        .card p {
+            text-shadow: 0 0 15px #000;
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="project.html">HOME</a></li>
+                <li><a href="">REGION</a></li>
+                <li><a href="">ABOUT</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu.jpg" class="menu-icon">
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h1>Deserts in India</h1>
+            <p>India has diverse desert landscapes, including the Thar Desert
+                in Rajasthan, the Kutch Desert in Gujarat, and the cold deserts
+                of Ladakh in Jammu and Kashmir. These regions boast unique ecosystems
+                and cultural heritage.</p>
+            <button type="button">Explore</button>
+        </div>
+        <div class="col">
+            <div class="card card1">
+                <h5>Thar Desert</h5>
+                <p>The Thar Desert, also known as the Great Indian Desert, sprawls across
+                    Rajasthan and parts of Gujarat. It is characterized by vast stretches of
+                    sand dunes, sparse vegetation, and extreme temperatures, harboring a rich
+                    diversity of flora and fauna adapted to arid conditions.</p>
+            </div>
+            <div class="card card2">
+                <h5>Rann of Kutch</h5>
+                <p>The Rann of Kutch, located in Gujarat, is a vast salt marsh known for its
+                    surreal white landscape during the dry season and its biodiversity during
+                    the monsoon. It hosts the Rann Utsav, showcasing the region's culture,
+                    crafts, and folk traditions. </p>
+            </div>
+            <div class="card card3">
+                <h5>Cold Deserts</h5>
+                <p>The cold deserts of Ladakh, located in the northernmost region of India,
+                    feature arid terrain, high-altitude plateaus, and sparse vegetation. This
+                    harsh environment supports unique flora and fauna adapted to extreme cold
+                    and low precipitation, creating a starkly beautiful landscape.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountains</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://wallpaper.dog/large/10991978.jpg);
+            background-position: center;
+            background-size: cover;
+            padding-left: 15%;
+            padding-right: 15%;
+            box-sizing: border-box;
+        }
+        .navbar {
+            height: 12%;
+            display: flex;
+            align-items: center;
+            background: #333;
+            width: 1485px;
+            position:relative;
+            left: -250px;
+        }
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+        .row {
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+        .col {
+            flex-basis: 50%;
+        }
+        h1 {
+            color: #fff;
+            font-size: 100px;
+        }
+        p {
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        button {
+            width: 180px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+        }
+        .card {
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 14px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url(images/bgimg.jpg);
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+        .card1{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/384/818/513/himalayas-mountains-landscape-nature-wallpaper-preview.jpg);
+}
+.card2{
+    background-image: url(https://t4.ftcdn.net/jpg/03/85/31/45/360_F_385314542_KcTL66A75XHweaTGegGMztkf3WMo1hKB.jpg);
+    position: relative;
+            top:-30px;
+            left: 0px;
+}
+.card3{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Sahyadri_Parvatmala.jpg/640px-Sahyadri_Parvatmala.jpg);
+    position: relative;
+            top: -20px;
+            left: 1px;
+}
+.card4{
+    background-image: url(https://assets.thehansindia.com/hansindia-bucket/6782_east%20ghart.jpg);
+    position: relative;
+            top: -17px;
+            left: 1px;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="project.html">HOME</a></li>
+                <li><a href="">REGION</a></li>
+                <li><a href="">ABOUT</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu.jpg" class="menu-icon">
+    </div>
+
+    <div class="row">
+        <div class="col">
+          <h1>Mountains in India</h1>
+          <p>India boasts a diverse range of mountains, including the mighty
+              Himalayas in the north, the scenic Western Ghats in the west,
+              and the picturesque Eastern Ghats in the east, offering 
+              breathtaking landscapes and rich biodiversity.</p>
+             <button type="button">Explore</button>
+        </div>
+        <div class="col">
+          <div class="card card1">
+            <h5>Himalayas</h5>
+            <p>The Himalayas, spanning India's northern border, stand as the world's 
+              highest mountain range, with peaks like Everest and K2. Their snow-capped 
+              majesty not only shapes India's geography but also hosts diverse ecosystems 
+              and cultures, attracting adventurers and spiritual seekers alike.</p>
+          </div>
+          <div class="card card2">
+            <h5>Aravalli Range</h5>
+            <p>The Aravalli Range, stretching across northwest India, is one of the oldest 
+              mountain ranges globally. Known for its rugged terrain and diverse flora and 
+              fauna, it serves as a vital watershed and offers stunning landscapes for exploration. </p>
+          </div>
+          <div class="card card3">
+            <h5>Western Ghats</h5>
+            <p>The Western Ghats, a UNESCO World Heritage Site, stretch along the western coast 
+              of India, harboring rich biodiversity and unique ecosystems. They feature lush forests,
+              cascading waterfalls, and diverse wildlife, making them a haven for nature lovers and 
+              adventurers alike.</p>
+            </div>
+          <div class="card card4">
+            <h5>Eastern Ghats</h5>
+            <p>The Eastern Ghats of India, running parallel to the eastern coast, are a series of low
+              to moderate mountain ranges with scenic beauty, diverse flora and fauna, and cultural 
+              significance, offering opportunities for trekking, wildlife exploration, and cultural 
+              immersion.</p>
+        </div>
+     </div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomadRhapsody</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .background-image-1 {
+            background-image: url('https://www.andbeyond.com/wp-content/uploads/sites/5/rajasthan-camels-desert-india.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+        }
+        
+        .background-image-2 {
+            
+            background-image: url('https://scottkelby.com/wp-content/uploads/2021/02/SK-16a-1024x683.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .blog-post {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+        
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+        
+        .blog-post h2 {
+            color: #333;
+        }
+        
+        .blog-post p {
+            color: #666;
+        }
+        
+        
+        
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .login-button:hover {
+            background-color: #555;
+        }
+        .search-input {
+            position: absolute;
+            top: 20px;
+            right: 135px; /* Adjust the position */
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 150px; /* Adjust the width */
+        }
+        
+        .search-button {
+            position: absolute;
+            top: 20px;
+            right: 320px; /* Adjust the position */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .search-button:hover {
+            background-color: #555;
+        }
+        
+        .destinations-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        
+            text-align: center;
+            position: absolute;
+            top: 115%;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            border-radius: 10px;
+        }
+        
+        .destination-image {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        .text-below-background {
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #ffffff;
+            margin-top: 35px;
+            padding-bottom: 13px;
+        }
+        .text-below-background{
+            border-radius: 10px;
+            position:relative;
+            top: 52%;
+            color: black;
+
+            height: 30;
+        }
+        /* New CSS for the added text */
+        .new-text {
+            text-align: center;
+            padding : 1050px 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+      
+        }
+        .new-text h2 {
+            color: #333;
+        }
+        .new-text p {
+            color: #666;
+        }
+        /* CSS for new images with text */
+.image-text-container {
+    display: flex;
+    position: relative;
+ 
+    top : -1000px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-text {
+    margin: 20px;
+    text-align: center;
+}
+
+.image-text img {
+    width: 500px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-text pre {
+    font-size: 14px;
+    color: #333;
+    display: inline;
+    position: relative;
+  top: 10px;
+    text-align: center;
+    font-size:large;
+    
+}
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 2; /* Ensure dropdown is above other elements */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 80px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 3; /* Bring dropdown content in front */
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="background-image-1">
+    
+    <header>
+        <h1>NomadRhapsody</h1>
+    </header>
+    <nav>
+        <a href="project2.html">HOME</a>
+        <a href="project_blog.html">BLOG</a>
+        <a href="destnation.html">DESTINATIONS</a>
+        <div class="dropdown" onclick="toggleDropdown()">
+            <span class="dropbtn">CATAGORIES</span>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="desert.html">DESERT</a><br>
+                <a href="mountain.html">MOUNTAIN</a><br>
+                <a href="beach.html">BEACH</a><br>
+                <a href="forest.html">FOREST</a><br>
+            </div>
+        </div>
+    
+        <script>
+            function toggleDropdown() {
+                var dropdownContent = document.getElementById("dropdownContent");
+                if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+                    dropdownContent.style.display = "block";
+                } else {
+                    dropdownContent.style.display = "none";
+                }
+            }
+        </script>
+        <a href="project_login.html">EMAIL</a>
+        <a href="#">CONTACT</a>
+    </nav>
+    <input type="text" class="search-input" placeholder="Search">
+    <button class="search-button">Search</button>
+    <a href="https://www.instagram.com/accounts/login/" target="_blank" class="login-button">Instagram</a>
+    <div class="container">
+        <div class="blog-post">
+            <h2>"Explore India's Essence: 'India Odyssey'</h2>
+            <p>"Embark on a vibrant journey through the heart of India with our captivating and immersive travel blogs, offering authentic insights and unforgettable experiences that showcase the diverse tapestry of this enchanting land."</p>
+        </div>
+        <div class="blog-post">
+            <h2>
+                "India's Natural Tapestry:"</h2>
+            <p>"Embark on an unforgettable journey through India's timeless wonders with 'India Odyssey.' Discover enchanting destinations, hidden gems, and expert travel tips, as we guide you through the vibrant tapestry of India's diverse landscapes and rich cultural heritage."</p>
+        </div>
+    </div>
+    <div class="text-below-background">
+        Destinations
+    </div>
+    <!-- Destinations section -->
+   
+    <div id="destinations-section" class="destinations-section">
+        <div>
+            <a href="rajasthan.html"><img src="https://st2.depositphotos.com/2422217/5465/i/450/depositphotos_54658133-stock-photo-bada-bagh-cenotaph-jaisalmer.jpg" alt="Destination 1" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="rajasthan.html">  <div class="destination-text">Rajasthan</div></a>
+        </div>
+        <div>
+            <a href="kerala.html"><img src="https://photoworkshopadventures.com/wp-content/uploads/2018/04/58-photo-workshop-adventures-india-kerala.jpg" alt="Destination 2" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="kerala.html"> <div class="destination-text">Kerala</div></a>
+        </div>
+        <div>
+            <a href="kashmir.html"><img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/01/Gulmarg.jpg" alt="Destination 3" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="kashmir.html"> <div class="destination-text">Kashmir</div></a>
+        </div>
+        <div>
+            <a href="uthrakhand.html"><img src="https://www.euttaranchal.com/tourism/photos/auli-3954689.jpg" alt="Destination 4" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="uthrakhand.html"> <div class="destination-text">Uttarakhand</div></a>
+        </div>
+        <div>
+            <a href="maharastra.html"><img src="https://cdn1.tripoto.com/media/filter/nxxl/img/616275/Image/1546520238_gateway_of_india.jpg.webp" alt="Destination 5" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="maharastra.html"> <div class="destination-text">Maharashtra</div></a>
+        </div>
+        <div>
+            <a href="goa.html"><img src="https://images.herzindagi.info/image/2021/Aug/travel-to-goa-main.jpg" alt="Destination 6" class="destination-image"height= '300px' width = "50px"></a>
+            <a href="goa.html"><div class="destination-text">Goa</div></a>
+        </div>
+    </div>
+
+    <!-- New text after 2nd page -->
+    <div>
+        <div class="new-text">
+        Blog  
+    </div>
+<!-- New images with text -->
+<div class="image-text-container">
+    <div class="image-text">
+        <img src="https://blog.yatradham.org/wp-content/uploads/2023/07/jaipur.jpg" alt="Image 1"height= '300px' width = "50px">
+        <pre>Want to spend a royal vacation in the ‘Land of Maharajas’? These Rajasthan travel blogs will give you a sneak peek in the colorful world of the royal
+             state. Get your hands on information like the most recommended places to visit, best time to visit, and exquisite shopping destinations in these 
+             Rajasthan blogs. While Jaipur, Udiapur, Jaisalmer and Pushkar are some of the most trending cities in the ‘Maharajaland’, these places are just the
+             tip of the iceberg of the experiences Rajasthan has in store for you. There is so much more to Rajasthan than just palaces and forts. Rajasthan tour blogs
+             will educate you about the hidden gems so that you can take the road less taken and have a unique experience on your holiday. Know all the best
+             dining spots so that you can satiate your taste buds with rich and flavorful Rajasthani cuisine. Enjoy rich Rajasthani hospitality in the lush 
+             resorts and hotels on your vacation. Planning a trip to the largest state in India by area can be overwhelming when you do not know where to begin. 
+             These Rajasthani trip blogs have been curated after extensive research and enthusiasm to cater essential details to our readers that they won’t find
+             anywhere else.
+        </pre>
+    
+    <div class="image-text">
+        <img src="https://media.istockphoto.com/id/1246366598/photo/a-scenic-view-of-boats-under-a-blue-sky-in-backwaters-situated-in-allepey-town-located-in.jpg?s=612x612&w=0&k=20&c=YBv_3nP-6YjvN9JRhaNsBmq8ke4azCgvGLS5h3r9jSk=" alt="Image 2">
+        <pre>If you’re looking for a Southern getaway in India then Kerala is the perfect choice of destination to plan your escape to and you have landed
+             at the right place to make this tropical vacation happen! Famously known as the ‘God’s Own Country’, Kerala is the picturesque beauty that is
+             located in the tropical Malabar Coast of India and here we give you a wide selection of Kerala Blogs, expertly weitten to cater to all your travel
+             needs. You can go as far as you can with your imagination and find the best of options to make your Kerala trip come true with a lifetime of
+             memories and adventures to look forward to. The backwaters of Kerala are a perfect place to unwind in the midst of swaying palm trees and
+             spice plantations. Soak in the aroma of coffee and go on an evening stroll exploring the tropical landscape of Kerala. Find all the information
+             about comfortable homestays or luxurious houseboats on this Kerala trip blog for a blissful vacation in this souther beauty. With what you'll
+             learn from these Kerala tour blogs you are bound to have a hassle free trip. Also, if you want motivation to traverse the serene backwaters of
+             this piece of paradise, teh below given write-ups will do the trick for you. Discover hidden gems, go off the beaten track and share your best travel
+             moments with your friends and family back home!</pre>
+    </div>
+    <div class="image-text">
+        <img src="https://st.depositphotos.com/1000597/5031/i/450/depositphotos_50312757-stock-photo-old-fishing-boats-on-beach.jpg" alt="Image 3">
+        <pre>Goa is the perfect mix of natural beauty, lively nightlife, and tropical environs. Check out our Goa blog portal, where you will find all the 
+            essential information to help you plan an awesome sauce vacation to the party-state. From the best tourist attractions to plush resorts, this 
+            collection of travel blogs on Goa will make your trip fun and hassle-free. Discover the tropical state's best-kept secrets in these blogs. Each Goa
+            travel blog showcase essential information such as the best time to visit, how to reach, and other nitty-gritty tips and information for 
+            you to enjoy your vacation fully. We have treated every Goa tour blog as a platform to showcase our love and fervor for India’s favorite party 
+            destination. Don't limit yourself to crowded beaches and attractions when you can explore new and offbeat places with the help of these Goa
+            rip blogs. Whether it's North Goa or South Goa, these Goa travel blogs have got you covered for both parts of the Portuguese corner of India.
+            Pin your favorite articles and feel free to share on your social media channels to kick start everyone's wanderlust to Goa. Watch out our this
+            space for the latest updates and new exciting information every day</pre>
+    </div>
+    <div class="image-text">
+        <img src="https://www.euttaranchal.com/tourism/photos/uttarakhand-1022884.jpg" alt="Image 4">
+        <pre>Welcome to the Uttarakhand Blog of TravelTriangle, a chance for you to explore the land of myths, magic and majestic beauty of the striking Himalayan
+             ranges. The land of Gods, explore the dramatic terrain of Uttarakhand, a state in the Northern part of India that holds quaint and pristine beauty
+             waiting to be explored. Find out the best hamlets, hidden gems and quaint hill stations. From Landsowne to Nainital and Mukteshwar to Jim Corbett,
+             Uttarakhand is a state that is blessed with rich flora and fauna. Go hiking trails, trekking expeditions, unique adventures and discover breathtaking
+             views from mountain peaks. Traverse the calm waters of the Naini lake in Nainital and immerse yourself in the charming wilderness of Jim Corbett 
+             National Park. Through the Uttarakhand travel blog, you’ll find everything that you’ve never seen before. So, what are you waiting for? Scroll 
+             below to go through some of the best Uttrakhand trip blog to make sure you have an unforgettable trip with your loved ones. The mesmerizing beauty 
+             of Uttarakhand will leave you awe-struck. Visit the Beatles ashram that was visited by the famous band, Beatles where they got inspired and 
+             it became the birthplace of many songs that they wrote. Grab your chance to book an amazing trip and find yourself amidst surreal beauty.</pre>
+    </div>
+    <div class="image-text">
+        <img src="https://media.istockphoto.com/id/1307189136/photo/gateway-of-india-mumbai-maharashtra-monument-landmark-famous-place-magnificent-view-without.webp?b=1&s=170667a&w=0&k=20&c=BLP7ZQkbok5etYvEF3obeqaG-5Sv06_kaqPfS8z9CS4=" alt="Image 5">
+        <pre>Maharashtra tourism holds immense growth potential, thanks to its robust infrastructure and diverse attractions. While the state boasts a rich
+             historical and cultural heritage, these facets have been underexplored by both the tourism industry and government agencies. With existing 
+             infrastructure and private investments, tourism could generate numerous job opportunities. However, the lack of comprehensive planning and 
+             coordination among various government departments has hindered progress. The Maharashtra government, through DCEL, has outlined a 20-year sustainable 
+             tourism development plan that prioritizes private sector involvement, environmental considerations, and socio-economic factors, fostering an
+             integrated approach among concerned departments.</pre>
+    </div><br><br>
+     
+   
+    <a href="project_blog.html">Load more places</a>
+</div>
+
+
+</body>
+</html>
